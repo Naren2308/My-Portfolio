@@ -180,25 +180,32 @@
     align-items: center; /* Center content vertically */
 }
 
-.image-frame img {
-    width: 100%; /* Make image take full width */
-    height: 100%; /* Make image take full height */
-    object-fit: cover; /* Cover the frame without distortion */
-}
-
 /* Adjustments for Service Icons */
-.services-grid {
-    display: flex;
-    justify-content: space-around; /* Space out service items */
-    flex-wrap: wrap; /* Allow wrapping */
-}
-
 .service-item {
     margin: 10px; /* Margin for service items */
     text-align: center; /* Center text under icons */
 }
 
-/* Adjustments for Projects and Certificates */
+/* Fixed 1:1 aspect ratio for service icons */
+.service-icon {
+    width: 100%; /* Make image take full width */
+    height: 100%; /* Make image take full height */
+    object-fit: cover; /* Cover the frame without distortion */
+}
+
+/* Adjustments for Projects */
+.project-item {
+    text-align: center; /* Center text under images */
+}
+
+.image-frame.project {
+    width: auto; /* Allow width to be flexible */
+    height: auto; /* Allow height to be flexible */
+    max-width: 300px; /* Set a max width for project images */
+    max-height: 200px; /* Set a max height for project images */
+}
+
+/* Adjustments for Certificates */
 .projects-grid, .certificates-grid {
     display: flex;
     justify-content: center; /* Center items */
@@ -206,10 +213,17 @@
     gap: 20px; /* Space between items */
 }
 
-.project-item, .certificate-item {
+.certificate-item {
     text-align: center; /* Center text under images */
 }
 
+/* Specific styles for project images */
+.project-item img {
+    width: 100%; /* Make image take full width */
+    height: auto; /* Allow height to adjust according to aspect ratio */
+    max-width: 100%; /* Ensure it does not exceed the frame */
+    object-fit: cover; /* Maintain cover while fitting the frame */
+}
 
         .about-content p {
             font-size: 1.2em; /* Reduced font size for better readability */
@@ -414,25 +428,25 @@
     <div class="certificates-grid">
         <div class="certificate-item">
             <div class="image-frame">
-                <img src="cert1.jpg" alt="Introduction to Python">
+                <img src="cert1.png" alt="Introduction to Python">
                 <p>Introduction to Python</p>
             </div>
         </div>
         <div class="certificate-item">
             <div class="image-frame">
-                <img src="cert2.jpg" alt="IBM Watson Studio">
+                <img src="cert2.png" alt="IBM Watson Studio">
                 <p>IBM Watson Studio</p>
             </div>
         </div>
         <div class="certificate-item">
             <div class="image-frame">
-                <img src="cert3.jpg" alt="Cloud Application Developer">
+                <img src="cert3.png" alt="Cloud Application Developer">
                 <p>Cloud Application Developer</p>
             </div>
         </div>
         <div class="certificate-item">
             <div class="image-frame">
-                <img src="cert4.jpg" alt="Data Analysis with Python">
+                <img src="cert4.png" alt="Data Analysis with Python">
                 <p>Data Analysis with Python</p>
             </div>
         </div>

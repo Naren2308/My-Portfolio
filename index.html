@@ -171,33 +171,66 @@
         /* Services Grid */
 .services-grid {
     display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid with a minimum column width */
     gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid */
     padding: 20px; /* Add padding around the grid */
 }
 
-/* Image Frame for Services */
-.service-item {
-    text-align: center; /* Center text under icons */
-}
-
-.image-frame.service {
-    width: 100%; /* Full width for responsive layout */
-    height: auto; /* Automatic height to maintain aspect ratio */
-    aspect-ratio: 1; /* 1:1 aspect ratio for service icons */
+/* Image Frame */
+.image-frame {
+    width: 150px; /* Fixed width for frames */
+    height: 200px; /* Adjusted height to accommodate various image ratios */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack image and text vertically */
 }
 
-/* Service Icons */
+/* Adjustments for Service Icons */
+.service-item {
+    margin: 10px; /* Margin for service items */
+    text-align: center; /* Center text under icons */
+}
+
 .service-icon {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     object-fit: cover; /* Cover the frame */
+}
+
+/* Adjustments for Projects */
+.project-item {
+    text-align: center; /* Center text under images */
+}
+
+.image-frame.project {
+    width: auto; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the frame without distortion */
+}
+
+/* Certificate Name */
+.image-frame p {
+    margin-top: 10px; /* Space between image and text */
+    font-weight: bold; /* Bold text for better visibility */
+    color: #fff; /* White text for contrast */
+}
+
+/* Project Item */
+.project-item {
+    text-align: center; /* Center text under images */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
 }
 
 /* Certificates Grid */
@@ -216,50 +249,42 @@
 
 /* Certificate Images */
 .certificate-image {
-    width: 100%; /* Full width to fit the grid item */
+    width: 100%; /* Make image take full width */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the frame without distortion */
 }
 
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
-    padding: 20px; /* Padding around the grid */
-}
-
-/* Project Item */
-.project-item {
-    text-align: center; /* Center text under images */
+/* Image Frame for Certificates */
+.image-frame.certificate {
+    width: 100%; /* Full width to fit the grid item */
+    height: auto; /* Automatic height to maintain aspect ratio */
+    aspect-ratio: 3 / 2; /* Adjusted aspect ratio (3:2) */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 /* Image Frame for Projects with 16:9 Aspect Ratio */
 .image-frame.project {
     width: 100%; /* Full width */
-    height: 0; /* Set height to 0 to maintain aspect ratio */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625) */
-    position: relative; /* For absolute positioning of images */
+    height: auto; /* Automatic height to maintain aspect ratio */
+    aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
 /* Project Images */
 .project-item img {
-    position: absolute; /* Position absolutely within the frame */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     object-fit: cover; /* Maintain cover while fitting the frame */
-}
-
-/* Certificate Name Styling */
-.image-frame p {
-    margin-top: 10px; /* Space between image and text */
-    font-weight: bold; /* Bold text for better visibility */
-    color: #fff; /* White text for contrast */
 }
 
         .about-content p {

@@ -168,13 +168,22 @@
             text-align: left;
         }
 
-        /* General Styles for Image Frames */
+        /* Services Grid */
+.services-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid with a minimum column width */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid */
+    padding: 20px; /* Add padding around the grid */
+}
+
+/* Adjustments for Image Frames */
 .image-frame {
-    width: 150px; /* Set a fixed width for the frame */
-    height: 150px; /* Set a fixed height for the frame */
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
     overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
@@ -186,11 +195,10 @@
     text-align: center; /* Center text under icons */
 }
 
-/* Fixed 1:1 aspect ratio for service icons */
 .service-icon {
-    width: 100%; /* Make image take full width */
-    height: 100%; /* Make image take full height */
-    object-fit: cover; /* Cover the frame without distortion */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the frame */
 }
 
 /* Adjustments for Projects */

@@ -234,23 +234,33 @@
     text-align: center; /* Center text under images */
 }
 
-/* Image Frame for Certificates (Landscape) */
+/* Image Frame for Certificates */
 .image-frame.certificate {
     width: 100%; /* Full width to fit the grid item */
-    height: 400px; /* Set a fixed height for a landscape orientation */
+    height: auto; /* Automatic height */
+    aspect-ratio: 4 / 3; /* 4:3 aspect ratio for landscape */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    position: relative; /* For absolute positioning of images */
 }
 
 /* Certificate Images */
-.certificate-image {
-    width: 100%; /* Full width to fit the frame */
-    height: auto; /* Allow height to adjust based on width */
+.image-frame.certificate img {
+    position: absolute; /* Position absolutely within the frame */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     object-fit: cover; /* Cover the frame without distortion */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+}
+
+/* Certificate Name Styling */
+.image-frame.certificate p {
+    margin-top: 10px; /* Space between image and text */
+    font-weight: bold; /* Bold text for better visibility */
+    color: #000; /* Text color for contrast */
 }
 
 /* Project Item */
@@ -462,59 +472,36 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <!-- Services Section -->
-<section id="services" class="section">
-    <h2>Services</h2>
-    <div class="services-grid">
-        <div class="service-item">
-            <img src="android.png" alt="Android" class="service-icon">
-        </div>
-        <div class="service-item">
-            <img src="ois.png" alt="OIS" class="service-icon">
-        </div>
-        <div class="service-item">
-            <img src="ui.png" alt="UI/UX Designing" class="service-icon">
-        </div>
-        <div class="service-item">
-            <img src="api.png" alt="API integration" class="service-icon">
-        </div>
-    </div>
-</section>
-
-        <!-- Certificates Section -->
-<section id="certificates" class="section">
+        <!-- Certificate Section -->
+        <section id="certificates" class="section">
     <h2>Certificates</h2>
     <div class="certificates-grid">
         <div class="certificate-item">
-            <div class="image-frame.certificate">
-                <div class="certificate-image">
-                    <img src="cert1.jpg" alt="Introduction to Python">
-                    <p>Introduction to Python</p>
-                </div>    
+            <div class="image-frame certificate">
+                <img src="cert1.jpg" alt="Introduction to Python">
+                <p>Introduction to Python</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame.certificate">
+            <div class="image-frame certificate">
                 <img src="cert2.jpg" alt="IBM Watson Studio">
                 <p>IBM Watson Studio</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame.certificate">
+            <div class="image-frame certificate">
                 <img src="cert3.jpg" alt="Cloud Application Developer">
                 <p>Cloud Application Developer</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame.certificate">
+            <div class="image-frame certificate">
                 <img src="cert4.jpg" alt="Data Analysis with Python">
                 <p>Data Analysis with Python</p>
             </div>
         </div>
     </div>
 </section>
-
 
         <!-- Projects Section -->
 <section id="projects" class="section">

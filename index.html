@@ -423,9 +423,9 @@
                     <!-- Education Box -->
                     <div class="detail-box">
                         <h3>Education</h3>
-                        <p>10th Grade - School Name | Year</p>
-                        <p>12th Grade - School Name | Year</p>
-                        <p>College Degree - University | Year</p>
+                        <p>10th Grade - Velammal Vidhyashram | 2018 - 2019</p>
+                        <p>12th Grade - Velammal Vidhyashram | 2020 - 2021</p>
+                        <p>College Degree - Dr. M.G.R. Educational And Research Institute | 2022 - 2025</p>
                     </div>
                     <!-- Work Experience Box -->
                     <div class="detail-box">
@@ -438,7 +438,7 @@
                             through innovation, collaboration, and continuous 
                             learning."</i>
                         </p>
-                        <button class="resume-button">View Resume</button>
+                        <button id="resumeButton" class="resume-button">View Resume</button>
                     </div>
                     <!-- Skills Section -->
                     <div class="detail-box">
@@ -537,6 +537,11 @@
         function toggleNav() {
             const sideNav = document.getElementById("sideNav");
             sideNav.style.left = sideNav.style.left === "-250px" ? "0" : "-250px";
+
+            document.getElementById("resumeButton").addEventListener("click", function() {
+    const resumeImageUrl = "path/to/your/resume-image.jpg"; // Replace with your actual image path
+    window.open(resumeImageUrl, "_blank"); // Open image in a new tab
+});
         }
     </script>
 </body>

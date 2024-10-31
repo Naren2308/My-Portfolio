@@ -220,6 +220,39 @@
     color: #fff; /* White text for contrast */
 }
 
+/* Certificates Grid */
+.certificates-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Individual Certificate Items */
+.certificate-item {
+    text-align: center; /* Center text under images */
+}
+
+/* Image Frame for Certificates (Landscape) */
+.image-frame.certificate {
+    width: 100%; /* Full width to fit the grid item */
+    height: 200px; /* Fixed height for landscape orientation */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Certificate Images */
+.certificate-image {
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
+    object-fit: cover; /* Cover the frame without distortion */
+}
+
 /* Project Item */
 .project-item {
     text-align: center; /* Center text under images */
@@ -233,45 +266,10 @@
     padding: 20px; /* Padding around the grid */
 }
 
-/* Certificates Grid */
-.certificates-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center items in the grid */
-    padding: 20px; /* Padding around the grid */
-}
-
-/* Individual Certificate Items */
-.certificate-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Certificate Images */
-.certificate-image {
-    width: 100%; /* Make image take full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the frame without distortion */
-}
-
-/* Image Frame for Certificates */
-.image-frame.certificate {
-    width: 100%; /* Full width to fit the grid item */
-    height: auto; /* Automatic height to maintain aspect ratio */
-    aspect-ratio: 3 / 2; /* Adjusted aspect ratio (3:2) */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-/* Image Frame for Projects with 16:9 Aspect Ratio */
+/* Image Frame for Projects (Landscape) */
 .image-frame.project {
     width: 100%; /* Full width */
-    height: auto; /* Automatic height to maintain aspect ratio */
-    aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
+    height: 200px; /* Fixed height for landscape orientation */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
@@ -282,8 +280,8 @@
 
 /* Project Images */
 .project-item img {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
     object-fit: cover; /* Maintain cover while fitting the frame */
 }
 
@@ -489,25 +487,25 @@
     <h2>Certificates</h2>
     <div class="certificates-grid">
         <div class="certificate-item">
-            <div class="image-frame">
+            <div class="image-frame.certificate">
                 <img src="cert1.jpg" alt="Introduction to Python">
                 <p>Introduction to Python</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame">
+            <div class="image-frame.certificate">
                 <img src="cert2.jpg" alt="IBM Watson Studio">
                 <p>IBM Watson Studio</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame">
+            <div class="image-frame.certificate">
                 <img src="cert3.jpg" alt="Cloud Application Developer">
                 <p>Cloud Application Developer</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame">
+            <div class="image-frame.certificate">
                 <img src="cert4.jpg" alt="Data Analysis with Python">
                 <p>Data Analysis with Python</p>
             </div>
@@ -521,14 +519,14 @@
     <h2>Projects</h2>
     <div class="projects-grid">
         <div class="project-item">
-            <div class="image-frame">
+            <div class="image-frame.project">
                 <img src="project1.png" alt="Retro Movies">
             </div>
             <h3>Retro Movies</h3>
             <p>I have created an sample Online ticket booking website</p>
         </div>
         <div class="project-item">
-            <div class="image-frame">
+            <div class="image-frame.project">
                 <img src="m4uhd.png" alt="m4uhd">
             </div>
             <h3>M4UHD Movie Streming</h3>

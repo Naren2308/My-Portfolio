@@ -213,17 +213,10 @@
     object-fit: cover; /* Cover the frame without distortion */
 }
 
-/* Certificate Name */
-.image-frame p {
-    margin-top: 10px; /* Space between image and text */
-    font-weight: bold; /* Bold text for better visibility */
-    color: #fff; /* White text for contrast */
-}
-
 /* Certificates Grid */
 .certificates-grid {
     display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly larger minimum width */
     gap: 20px; /* Space between grid items */
     justify-items: center; /* Center items in the grid */
     padding: 20px; /* Padding around the grid */
@@ -243,6 +236,7 @@
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     position: relative; /* For absolute positioning of images */
+    max-width: 450px; /* Limit max width for larger displays */
 }
 
 /* Certificate Images */

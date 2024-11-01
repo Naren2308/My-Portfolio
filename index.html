@@ -289,17 +289,18 @@ h3 {
     border-collapse: collapse;
     margin-top: 10px;
     border: 2px solid red; /* Red outline for the entire table */
+    background-color: transparent; /* Transparent background */
 }
 
 .detail-box th, .detail-box td {
-    border: 1px solid #ddd;
+    border: 1px solid red; /* Red border for each cell */
     padding: 8px;
     text-align: left;
+    color: white; /* White text */
 }
 
 .detail-box th {
-    background-color: #000; /* Black background */
-    color: #faf7f7; /* Light text color for contrast */
+    background-color: rgba(255, 0, 0, 0.2); /* Semi-transparent red for header cells */
     font-weight: bold;
 }
 

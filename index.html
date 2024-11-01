@@ -307,22 +307,11 @@ h3 {
     padding: 20px; /* Padding around the grid */
 }
 
-/* Certificates Section */
-.certificates-container {
-    max-width: 900px; /* Consistent max width */
-    margin: auto; /* Center the container */
-    display: flex;
-    flex-direction: column; /* Change to column layout */
-    align-items: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
-}
-
-/* Certificates List */
-.certificates-list {
-    display: flex; /* Use flex for item arrangement */
-    flex-wrap: wrap; /* Allow items to wrap to next line */
-    gap: 30px; /* Increase space between items */
-    justify-content: flex-start; /* Align items to the start */
+/* Certificate Images */
+.image-frame.certificate img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the frame without distortion */
 }
 
 /* Certificate Title Styling */
@@ -332,15 +321,37 @@ h3 {
     color: #000; /* Text color for contrast */
     font-size: 1.2em; /* Adjust font size for better visibility */
 }
-    
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center project items */
+
+/* Certificates Section - Compact Layout */
+.certificates-container {
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
 }
-    
+
+.certificates-container ul {
+    list-style-type: disc; /* Use disc style for the bullet points */
+    padding-left: 20px; /* Indent the bullet points */
+}
+
+.certificates-container p {
+    margin: 15px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger text for readability */
+}
+
+/* Projects Section - Compact Layout */
+.projects-container {
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: left; /* Align text to the left */
+}
+
 /* Consistent Font Sizes */
 .projects-container h2 {
     font-size: 2.5em; /* Consistent heading size */
@@ -349,36 +360,17 @@ h3 {
     margin-bottom: 20px; /* Space below the heading */
 }
 
-/* Projects Container */
-.projects-container {
-    max-width: 900px; /* Consistent max width */
-    margin: auto; /* Center the container */
-    display: flex;
-    flex-direction: column; /* Change to column layout */
-    align-items: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
-}
-
-.projects-container h2 {
-    font-size: 2.5em; /* Consistent heading size */
-    color: #ff4a4a; /* Heading color */
-    text-align: left; /* Align the heading text to the left */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Projects List */
-.projects-list {
-    display: flex; /* Use flex for item arrangement */
-    flex-wrap: wrap; /* Allow items to wrap to next line */
-    gap: 20px; /* Space between items */
-    justify-content: flex-start; /* Align items to the start */
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center project items */
 }
 
 /* Project Item */
 .project-item {
-    width: 100%; /* Full width of container */
-    max-width: 300px; /* Max width for individual project items */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center text under images */
 }
 
 /* Image Frame for Projects */
@@ -393,12 +385,43 @@ h3 {
     align-items: center; /* Center content vertically */
 }
 
-/* Project Title Styling */
-.project-title {
-    margin-top: 10px; /* Space between image and text */
-    font-weight: bold; /* Bold text for better visibility */
-    color: #000; /* Text color for contrast */
-    font-size: 1.2em; /* Adjust font size for better visibility */
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Full width to fit the frame */
+    height: auto; /* Allow height to adjust based on width */
+    max-height: 100%; /* Ensure image height does not exceed frame height */
+    object-fit: contain; /* Maintain aspect ratio while fitting the frame */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    justify-content: center; /* Center modal content */
+    align-items: center; /* Center modal content */
+}
+
+.modal img {
+    max-width: 90%; /* Scale image within modal */
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Contact Section - Compact Layout */
@@ -622,7 +645,7 @@ h3 {
         <h2>Projects</h2> <!-- Correct placement of the heading -->
         <div class="projects-grid">
             <div class="project-item">
-                <div class="image-frame project"> <!-- Correct class name without dot -->
+                <div class="image-frame project">
                     <img src="project1.png" alt="Retro Movies">
                 </div>
                 <h3>Retro Movies</h3>

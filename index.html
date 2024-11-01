@@ -191,113 +191,6 @@ h1, h2, h3, p {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Individual Certificate Items */
-.certificate-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Certificates Grid */
-.certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Equal gap between items */
-    justify-items: center;
-}
-
-/* Image Frame for Certificates */
-.image-frame.certificate {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-width: 450px; /* Maximum width for larger displays */
-}
-
-.image-frame.certificate img {
-    position: absolute; /* Position absolutely within the frame */
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-
-/* Projects Section - Compact Layout */
-.projects-container {
-    max-width: 900px; /* Max width for consistency */
-    margin: auto; /* Center the container */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center project items */
-}
-
-/* Project Item */
-.project-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Image Frame for Projects */
-.image-frame.project {
-    width: 100%; /* Full width */
-    height: 200px; /* Fixed height for landscape orientation */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-/* Image Styling */
-.project-item img {
-    width: 100%; /* Full width to fit the frame */
-    height: 100%; /* Full height to fit the frame */
-    object-fit: cover; /* Maintain cover while fitting the frame */
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-    justify-content: center; /* Center modal content */
-    align-items: center; /* Center modal content */
-}
-
-.modal img {
-    max-width: 90%; /* Scale image within modal */
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
 /* Consistent Font Sizes */
 h2 {
     font-size: 2.5em; /* Consistent heading size */
@@ -403,6 +296,123 @@ h3 {
 .skill-percentage {
     color: #faf7f7; /* Ensure percentage text is readable */
     padding-right: 10px; /* Add some padding to the right */
+}
+
+/* Certificates Grid */
+.certificates-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly larger minimum width */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items in the grid */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Individual Certificate Items */
+.certificate-item {
+    text-align: center; /* Center text under images */
+}
+
+/* Image Frame for Certificates */
+.image-frame.certificate {
+    width: 100%; /* Full width to fit the grid item */
+    height: auto; /* Automatic height */
+    aspect-ratio: 4 / 3; /* 4:3 aspect ratio for landscape */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    position: relative; /* For absolute positioning of images */
+    max-width: 450px; /* Limit max width for larger displays */
+}
+
+/* Certificate Images */
+.image-frame.certificate img {
+    position: absolute; /* Position absolutely within the frame */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the frame without distortion */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+}
+
+/* Certificate Name Styling */
+.image-frame.certificate p {
+    margin-top: 10px; /* Space between image and text */
+    font-weight: bold; /* Bold text for better visibility */
+    color: #000; /* Text color for contrast */
+}
+
+/* Projects Section - Compact Layout */
+.projects-container {
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center project items */
+}
+
+/* Project Item */
+.project-item {
+    text-align: center; /* Center text under images */
+}
+
+/* Image Frame for Projects */
+.image-frame.project {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for landscape orientation */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
+    object-fit: cover; /* Maintain cover while fitting the frame */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    justify-content: center; /* Center modal content */
+    align-items: center; /* Center modal content */
+}
+
+.modal img {
+    max-width: 90%; /* Scale image within modal */
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 /* Contact Info */
@@ -588,7 +598,6 @@ h3 {
     <h2>Certificates</h2>
     <div class="certificates-grid">
         <div class="certificate-item">
-            <div class="certificates-container">
             <div class="image-frame certificate" onclick="openModal('cert1.jpg')"> <!-- Add onclick here -->
                 <img src="cert1.jpg" alt="Introduction to Python">
                 <p>Introduction to Python</p>
@@ -629,7 +638,6 @@ h3 {
     <div class="projects-grid">
         <div class="project-item">
             <div class="image-frame.project">
-                <div class="projects-container">
                 <img src="project1.png" alt="Retro Movies">
             </div>
             <h3>Retro Movies</h3>
@@ -649,7 +657,6 @@ h3 {
     <section id="contact" class="section">
         <h2>Contact</h2>
         <div class="contact-info">
-            <div class="contact-container">
             <p>Email: dir.naren@gmail.com</p>
             <p>Phone: 7904752200</p>
             <p>Address: 123, Anna Nagar, Chennai, India</p>

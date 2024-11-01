@@ -342,57 +342,51 @@ h3 {
 
 /* Projects Section - Compact Layout */
 .projects-container {
-    max-width: 900px; /* Max width for consistency */
-    margin: auto; /* Center the container */
+    max-width: 900px;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally in the container */
-    text-align: left; /* Align text to the left */
+    align-items: flex-start; /* Align heading to the left */
+    text-align: left;
 }
 
 .projects-container h2 {
-    text-align: left; /* Align text to the left */
-}
-    
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center project items */
-    justify-content: center; /* Center the grid within its container */
+    text-align: left;
+    font-size: 2.5em;
+    color: #ff4a4a;
 }
 
+/* Projects Grid */
 .projects-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px; /* Space between project items */
-    justify-content: center; /* Center align project items */
+    gap: 30px;
+    justify-content: center;
     margin-top: 20px;
 }
 
 /* Project Item */
 .project-item {
-    text-align: center; /* Center text under images */
+    text-align: center;
+    width: calc(50% - 15px);
 }
 
 /* Image Frame for Projects */
 .image-frame.project {
-    width: 100%; /* Full width */
-    height: 200px; /* Fixed height for landscape orientation */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Image Styling */
 .project-item img {
-    width: 100%; /* Full width to fit the frame */
-    height: 100%; /* Full height to fit the frame */
-    object-fit: cover; /* Maintain cover while fitting the frame */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .project-title {
@@ -619,24 +613,22 @@ h3 {
 <!-- Projects Section -->
 <section id="projects" class="section">
     <div class="projects-container">
-        <div class="projects-grid"></div>
         <h2>Projects</h2>
         <div class="projects-list">
             <div class="project-item">
                 <div class="image-frame project">
                     <img src="project1.png" alt="Retro Movies">
                 </div>
-                <h3 class="project-title">Retro Movies</h3>
+                <p class="project-title">Retro Movies</p>
                 <p><i>I have created a sample Online ticket booking website</i></p>
             </div>
             <div class="project-item">
                 <div class="image-frame project">
                     <img src="m4uhd.png" alt="M4UHD Movie Streaming">
                 </div>
-                <h3 class="project-title">M4UHD Movie Streaming</h3>
+                <p class="project-title">M4UHD Movie Streaming</p>
                 <p><i>In this project, I have created a sample Movie streaming application</i></p>
             </div>
-        </div>    
         </div>
     </div>
 </section>

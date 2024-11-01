@@ -284,6 +284,23 @@ h3 {
     margin: 10px 0; /* Space between title and text */
 }
 
+.detail-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.detail-box th, .detail-box td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.detail-box th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
 /* Resume Button */
 .resume-button {
     padding: 12px 24px;
@@ -349,11 +366,11 @@ h3 {
 }
 
 .invisible-text {
-    text-indent: -9999px;
+    color: transparent;
 }
 
-.none {
-    display: none;
+.transparent {
+    color: transparent;
 }
 
 </style>
@@ -397,23 +414,38 @@ h3 {
         When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or sharing my knowledge through tutorials and workshops. I’m always eager to learn and grow in this fast-paced industry.</p>
     </div>
                 <div class="about-details">
-                    <!-- Education Box -->
-                    <div class="detail-box">
-                        <h3><u>Education</u></h3>
-                        <p>Grade 10 : Velammal Vidhyashram<br>
-                            Year: 2018 - 2019<br>
-                            Marks: 85%
-                        </p>
-                        <p>Grade 12 : Velammal Vidhyashram<br> 
-                            Year: 2020 - 2021<br>
-                            Score: 80%
-                        </p>
-                        <p>College : Dr. M.G.R Uiversity<br> 
-                            Year: 2022 - 2025<br>
-                            CGPI: 8.2%
-                        </p>
-                    </div>
-                    <!-- Work Experience Box -->
+    <!-- Education Table -->
+    <div class="detail-box">
+        <h3><u>Education</u></h3>
+        <table>
+            <tr>
+                <th>Education Level</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Score</th>
+            </tr>
+            <tr>
+                <td>Grade 10</td>
+                <td>Velammal Vidhyashram</td>
+                <td>2018 - 2019</td>
+                <td>85%</td>
+            </tr>
+            <tr>
+                <td>Grade 12</td>
+                <td>Velammal Vidhyashram</td>
+                <td>2020 - 2021</td>
+                <td>80%</td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>Dr. M.G.R University</td>
+                <td>2022 - 2025</td>
+                <td>8.2 CGPI</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
                     <div class="detail-box">
                         <h3><u>Work Experience</u></h3>
                         <p>Currently seeking job opportunities.</p>
@@ -534,7 +566,7 @@ h3 {
                 <a href="#" target="_blank">Twitter</a>
                 <a href="#" target="_blank">LinkedIn</a>
 
-                <p class="invisible-text none">-------------------------------------------------------------------------------------------
+                <p class="invisible-text transparent">-------------------------------------------------------------------------------------------
                     ----------------------------------------------------------------------------------------------------------------------
                     ----------------------------------------------------------------------------------------------------------------------
                     ----------------------------------------------------------------------------------------------------------------------

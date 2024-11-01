@@ -307,13 +307,28 @@ h3 {
     padding: 20px; /* Padding around the grid */
 }
 
+/* Certificate Images */
+.image-frame.certificate img {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover the frame without distortion */
+}
+
+/* Certificate Title Styling */
+.certificate-title {
+    margin-top: 10px; /* Space between image and text */
+    font-weight: bold; /* Bold text for better visibility */
+    color: #000; /* Text color for contrast */
+    font-size: 1.2em; /* Adjust font size for better visibility */
+}
+
 /* Certificates Section - Compact Layout */
 .certificates-container {
     max-width: 900px; /* Max width for consistency */
     margin: auto; /* Center the container */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the start */
     text-align: left; /* Align text to the left */
 }
 
@@ -327,24 +342,13 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Center the Certificate Item */
-.certificate-item {
-    text-align: center; /* Center text under images */
-    margin-bottom: 20px; /* Space below each certificate item */
-}
-
-/* Image Frame for Certificates */
-.image-frame.certificate {
-    width: 100%; /* Full width to fit the grid item */
-    height: auto; /* Automatic height */
-    aspect-ratio: 3 / 2; /* Reduced aspect ratio for smaller images */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    max-width: 450px; /* Reduced max width for smaller displays */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+/* Consistent Font Sizes for Section Headings */
+.certificates-container h2,
+.projects-container h2 {
+    font-size: 2.5em; /* Consistent heading size */
+    color: #ff4a4a; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center; /* Center the heading text */
 }
 
 /* Projects Section - Compact Layout */

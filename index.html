@@ -366,7 +366,7 @@ h3 {
 /* Image Frame for Projects */
 .image-frame.project {
     width: 100%; /* Full width */
-    height: 300px; /* Fixed height for equal frame size */
+    max-height: 300px; /* Set a max height for equal frame size */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
@@ -378,8 +378,9 @@ h3 {
 /* Image Styling */
 .project-item img {
     width: 100%; /* Full width to fit the frame */
-    height: 100%; /* Full height to fit the frame */
-    object-fit: cover; /* Maintain cover while fitting the frame */
+    height: auto; /* Allow height to adjust based on width */
+    max-height: 100%; /* Ensure image height does not exceed frame height */
+    object-fit: contain; /* Maintain aspect ratio while fitting the frame */
 }
 
 /* Modal Styles */

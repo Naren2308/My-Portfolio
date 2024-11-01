@@ -197,6 +197,11 @@
     animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
+/* Individual Certificate Items */
+.certificate-item {
+    text-align: center; /* Center text under images */
+}
+
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
@@ -229,6 +234,12 @@
     margin-top: 10px;
     font-weight: bold;
     color: #000;
+}
+
+.image-frame.project {
+    width: auto; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the frame without distortion */
 }
 
 /* Project Item */

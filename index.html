@@ -298,91 +298,88 @@ h3 {
     padding-right: 10px; /* Add some padding to the right */
 }
 
-/* Certificate Images */
-.image-frame.certificate {
-    width: 45%; /* Reduce frame size */
-    max-width: 400px; /* Set a max width for images */
-    height: auto; /* Adjust height proportionally */
-    margin-bottom: 20px; /* Space between rows */
-    overflow: hidden; /* Hide overflow for consistent frames */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
-
-.image-frame.certificate img {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the frame without distortion */
-}
-
-/* Certificates List - Two Rows */
-.certificates-list {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    gap: 20px; /* Space between items */
-    justify-content: space-around; /* Distribute images evenly */
-}
-
-/* Certificate Title Styling */
-.certificate-title {
-    margin-top: 10px; /* Space between image and text */
-    font-weight: bold;
-    color: #000;
-    font-size: 1.2em;
-}
-
-/* Certificates Section - Compact Layout */
+/* Certificates Section */
 .certificates-container {
     max-width: 900px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
 }
 
-/* Projects Container */
+.certificates-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Space between items */
+    justify-items: center; /* Center items in grid */
+    margin-top: 20px;
+}
+
+.certificate-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-frame.certificate {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-frame.certificate img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.certificate-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Projects Section */
 .projects-container {
     max-width: 900px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align the contents */
-    text-align: center; /* Center align the text */
+    text-align: center;
 }
 
-/* Projects List */
 .projects-list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px; /* Space between project items */
     justify-content: center; /* Center align project items */
+    margin-top: 20px;
 }
 
-/* Project Item */
 .project-item {
     width: 100%;
-    max-width: 250px; /* Set consistent width */
-    text-align: center; /* Center text below image */
+    max-width: 300px;
+    text-align: center;
 }
 
-/* Image Frame for Projects */
 .image-frame.project {
     width: 100%;
-    max-height: 250px; /* Consistent max height */
+    height: 200px;
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Project Title Styling */
+.image-frame.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-title {
     margin-top: 10px;
     font-weight: bold;
-    color: #000;
+    color: #333;
     font-size: 1.2em;
 }
 
@@ -567,63 +564,62 @@ h3 {
 </div>
 </section>
 
-        <!-- Modal for Image Display -->
-<div id="imageModal" class="modal" style="display: none;">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img class="modal-content" id="modalImage" alt="Modal Image">
-</div>
-
 <!-- Certificates Section -->
 <section id="certificates" class="section">
     <div class="certificates-container">
-    <h2>Certificates</h2>
-    <div class="certificates-list">
-        <div class="image-frame certificate">
-                <img src="cert1.jpg" alt="Introduction to Python">
-            <div class="certificate-title">
-            <p>Introduction to Python</p>
-        </div>
-        <div class="certificate-item">
-                <img src="cert2.jpg" alt="IBM Watson Studio">
+        <h2>Certificates</h2>
+        <div class="certificates-list">
+            <div class="certificate-item">
+                <div class="image-frame certificate">
+                    <img src="cert1.jpg" alt="Introduction to Python">
+                </div>
+                <p class="certificate-title">Introduction to Python</p>
             </div>
+            <div class="certificate-item">
+                <div class="image-frame certificate">
+                    <img src="cert2.jpg" alt="IBM Watson Studio">
+                </div>
+                <p class="certificate-title">IBM Watson Studio</p>
             </div>
-            <p>IBM Watson Studio</p>
-        </div>
-        <div class="certificate-item">
-                <img src="cert3.jpg" alt="Cloud Application Developer">
+            <div class="certificate-item">
+                <div class="image-frame certificate">
+                    <img src="cert3.jpg" alt="Cloud Application Developer">
+                </div>
+                <p class="certificate-title">Cloud Application Developer</p>
             </div>
-            <p>Cloud Application Developer</p>
-        </div>
-        <div class="certificate-item">
-                <img src="cert4.jpg" alt="Data Analysis with Python">
+            <div class="certificate-item">
+                <div class="image-frame certificate">
+                    <img src="cert4.jpg" alt="Data Analysis with Python">
+                </div>
+                <p class="certificate-title">Data Analysis with Python</p>
             </div>
-            <p>Data Analysis with Python</p>
         </div>
     </div>
 </section>
 
 <!-- Projects Section -->
-<div class="projects-container">
-    <h2>Projects</h2>
-    <p>Here are some of the projects I've worked on:</p>
-    <div class="project-item">
-        <div class="image-frame project">
+<section id="projects" class="section">
+    <div class="projects-container">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I've worked on:</p>
+        <div class="projects-list">
+            <div class="project-item">
+                <div class="image-frame project">
                     <img src="project1.png" alt="Retro Movies">
                 </div>
-                <h3>Retro Movies</h3>
+                <h3 class="project-title">Retro Movies</h3>
                 <p><i>I have created a sample Online ticket booking website</i></p>
             </div>
             <div class="project-item">
-                <div class="image-frame project"> <!-- Correct class name without dot -->
+                <div class="image-frame project">
                     <img src="m4uhd.png" alt="M4UHD Movie Streaming">
                 </div>
-                <h3>M4UHD Movie Streaming</h3>
+                <h3 class="project-title">M4UHD Movie Streaming</h3>
                 <p><i>In this project, I have created a sample Movie streaming application</i></p>
             </div>
         </div>
     </div>
 </section>
-
 
 <!-- Contact Section -->
 <section id="contact" class="section">

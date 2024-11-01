@@ -16,17 +16,6 @@
             scroll-behavior: smooth;
         }
 
-        .menu {
-    padding-top: 20px; /* Adjust the top padding as needed */
-}
-
-/* or using margin */
-
-.menu {
-    margin-top: 20px; /* Adjust the top margin as needed */
-}
-
-
         /* Aside */
         .aside {
             width: 270px;
@@ -82,19 +71,20 @@
         /* Side Navigation */
         .side-nav {
             position: fixed;
-            top: 0;
+            top: 20px;
             left: -250px;
             width: 250px;
             height: 100%;
             background-color: #3d3d3d;
             transition: left 0.3s ease-in-out;
             z-index: 1000;
-            padding: 20px;
+            padding-top: 80px;
         }
 
         .side-nav ul {
             list-style: none;
             padding: 0;
+            margin-top: 20px;
         }
 
         .side-nav a {
@@ -115,7 +105,7 @@
         /* Menu Icon */
         .menu-icon {
             position: fixed;
-            top: 20px;
+            top: 40px;
             left: 20px;
             font-size: 36px;
             color: #ff4a4a;

@@ -169,32 +169,26 @@
             text-align: left;
         }
 
-        /* Typing Effect */
+.typing-effect {
+    font-size: 2em; /* Adjust size as needed */
+    color: #ff4a4a; /* Text color */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow */
+    border-right: 4px solid #ff4a4a; /* Cursor effect */
+    width: 0; /* Initial width */
+    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+    from { width: 0; }
+    to { width: 100%; }
 }
 
+/* Blinking cursor animation */
 @keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
-}
-
-.typing-text {
-    font-size: 2em;
-    font-weight: bold;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid;
-    animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
+    from, to { border-color: transparent; }
+    50% { border-color: #ff4a4a; }
 }
 
 /* Individual Certificate Items */
@@ -205,7 +199,7 @@
 .certificates-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-    gap: 20px; /* Equal gap between items */
+    gap: 30px; /* Larger gap for larger images */
     justify-items: center;
     padding: 20px;
 }
@@ -217,16 +211,17 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
-    max-width: 450px; /* Maximum width for larger displays */
+    max-width: 500px; /* Larger max width */
+    cursor: pointer; /* Pointer to indicate clickability */
 }
 
 .image-frame.certificate img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -234,6 +229,36 @@
     margin-top: 10px;
     font-weight: bold;
     color: #000;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%; /* Scale image within modal */
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
 
 .image-frame.project {
@@ -392,11 +417,12 @@
     <div class="container">
         <!-- Home Section -->
         <section id="home" class="section">
-            <h1><span class="typing-text">Welcome to My Portfolio</span></h1>
+              <h1 class="typing-effect">Hello, I’m Narenkumar, an Enthusiastic Application Developer.</h1>
             <div class="profile-image">
-                <img src="profile.jpg" alt="Profile Picture">
+              <img src="profile.jpg" alt="Profile Picture">
             </div>
         </section>
+
 
         <!-- About Section -->
         <section id="about" class="section">
@@ -453,35 +479,39 @@
         <section id="certificates" class="section">
     <h2>Certificates</h2>
     <div class="certificates-grid">
-        <!-- First Row -->
         <div class="certificate-item">
-            <div class="image-frame certificate">
+            <div class="image-frame certificate" onclick="openModal('cert1.jpg')">
                 <img src="cert1.jpg" alt="Introduction to Python">
                 <p>Introduction to Python</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame certificate">
+            <div class="image-frame certificate" onclick="openModal('cert2.jpg')">
                 <img src="cert2.jpg" alt="IBM Watson Studio">
                 <p>IBM Watson Studio</p>
             </div>
         </div>
-        
-        <!-- Second Row -->
         <div class="certificate-item">
-            <div class="image-frame certificate">
+            <div class="image-frame certificate" onclick="openModal('cert3.jpg')">
                 <img src="cert3.jpg" alt="Cloud Application Developer">
                 <p>Cloud Application Developer</p>
             </div>
         </div>
         <div class="certificate-item">
-            <div class="image-frame certificate">
+            <div class="image-frame certificate" onclick="openModal('cert4.jpg')">
                 <img src="cert4.jpg" alt="Data Analysis with Python">
                 <p>Data Analysis with Python</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Modal for Zoomed Image -->
+<div class="modal" id="imageModal">
+    <span class="modal-close" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Zoomed Certificate">
+</div>
+
 
 
         <!-- Projects Section -->
@@ -528,6 +558,51 @@
             document.getElementById("resumeButton").addEventListener("click", function() {
     const resumeImageUrl = "Resume.jpg"; // Replace with your actual image path
     window.open(resumeImageUrl, "_blank"); // Open image in a new tab
+});
+
+            function openModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    modal.style.display = "flex"; // Display the modal
+    modalImage.src = imageSrc; // Set the modal image source
+}
+
+function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.style.display = "none"; // Hide the modal
+}
+
+            const phrases = [
+    "Hello, I’m Narenkumar, an Enthusiastic Application Developer.",
+    "Welcome to My World of Coding! I'm Narenkumar, Your Application Developer.",
+    "Hi there! I'm Narenkumar, Passionate About Creating Innovative Applications.",
+    "Greetings! I’m Narenkumar, an Application Developer Committed to Excellence.",
+    "Welcome! I’m Narenkumar, Your Go-To Application Developer for Innovative Solutions."
+];
+
+let currentPhrase = 0;
+
+function type() {
+    const typingText = document.querySelector('.typing-effect');
+    typingText.textContent = '';
+    let letterIndex = 0;
+
+    const interval = setInterval(() => {
+        if (letterIndex < phrases[currentPhrase].length) {
+            typingText.textContent += phrases[currentPhrase][letterIndex];
+            letterIndex++;
+        } else {
+            clearInterval(interval);
+            setTimeout(() => {
+                currentPhrase = (currentPhrase + 1) % phrases.length; // Move to next phrase
+                type(); // Start typing next phrase
+            }, 2000); // Pause before starting next phrase
+        }
+    }, 100); // Typing speed (adjust as necessary)
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    type(); // Start the typing effect
 });
         }
     </script>

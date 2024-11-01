@@ -80,32 +80,51 @@ h1, h2, h3, p {
     left: -250px;
     width: 250px;
     height: 100%;
-    background-color: #3d3d3d;
+    background-color: #3d3d3d; /* Background color */
     transition: left 0.3s ease-in-out;
     z-index: 1000;
     padding-top: 80px;
 }
 
+/* List Style */
 .side-nav ul {
-    list-style: none;
+    list-style: none; /* Remove bullets */
     padding: 0;
-    margin-top: 20px;
+    margin-top: 20px; /* Space from the top */
 }
 
+/* Link Style */
 .side-nav a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    font-size: 1.3em;
-    padding: 15px;
-    font-weight: 500;
-    transition: color 0.3s;
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default text color */
+    display: flex; /* Use flexbox for icon and text alignment */
+    align-items: center; /* Center items vertically */
+    font-size: 1.3em; /* Font size */
+    padding: 15px; /* Padding around links */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and scale */
 }
 
-.side-nav a:hover {
-    color: #ff4a4a;
-    transform: scale(1.1);
+/* Icon Style */
+.side-nav a i {
+    margin-right: 10px; /* Space between icon and text */
+    background: linear-gradient(45deg, #ff4a4a, #ff6a6a); /* Gradient color for icons */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent for gradient effect */
 }
+
+/* Hover Effect */
+.side-nav a:hover {
+    color: #ff4a4a; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge the link on hover */
+}
+
+/* Active Link */
+.side-nav a.active {
+    color: #ff4a4a; /* Active link color */
+    font-weight: bold; /* Bold font for active link */
+}
+
 
 /* Menu Icon */
 .menu-icon {
@@ -436,19 +455,20 @@ h3 {
 </head>
 <body>
 
-    <!-- Menu Icon -->
-    <div class="menu-icon" onclick="toggleNav()">☰</div>
+<!-- Menu Icon -->
+<div class="menu-icon" onclick="toggleNav()">☰</div>
 
-    <!-- Side Navigation -->
-    <nav class="side-nav" id="sideNav">
-        <ul>
-            <li><a href="#home" onclick="toggleNav()">Home</a></li>
-            <li><a href="#about" onclick="toggleNav()">About</a></li>
-            <li><a href="#certificates" onclick="toggleNav()">Certificates</a></li>
-            <li><a href="#projects" onclick="toggleNav()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleNav()">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Side Navigation -->
+<nav class="side-nav" id="sideNav">
+    <ul>
+        <li><a href="#home" onclick="toggleNav()"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about" onclick="toggleNav()"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#certificates" onclick="toggleNav()"><i class="fas fa-certificate"></i> Certificates</a></li>
+        <li><a href="#projects" onclick="toggleNav()"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#contact" onclick="toggleNav()"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+</nav>
+
 
     <!-- Content Sections -->
     <div class="container">

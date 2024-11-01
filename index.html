@@ -340,11 +340,23 @@ h3 {
     font-size: 1.2em;
 }
 
-/* Projects Section */
+/* Projects Section - Compact Layout */
 .projects-container {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally in the container */
+    text-align: left; /* Align text to the left */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center project items */
+    justify-content: center; /* Center the grid within its container */
 }
 
 .projects-list {
@@ -355,24 +367,28 @@ h3 {
     margin-top: 20px;
 }
 
+/* Project Item */
 .project-item {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+    text-align: center; /* Center text under images */
 }
 
+/* Image Frame for Projects */
 .image-frame.project {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height for landscape orientation */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
 }
 
-.image-frame.project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
+    object-fit: cover; /* Maintain cover while fitting the frame */
 }
 
 .project-title {
@@ -599,6 +615,7 @@ h3 {
 <!-- Projects Section -->
 <section id="projects" class="section">
     <div class="projects-container">
+        <div class="projects-grid"></div>
         <h2>Projects</h2>
         <div class="projects-list">
             <div class="project-item">
@@ -615,6 +632,7 @@ h3 {
                 <h3 class="project-title">M4UHD Movie Streaming</h3>
                 <p><i>In this project, I have created a sample Movie streaming application</i></p>
             </div>
+        </div>    
         </div>
     </div>
 </section>

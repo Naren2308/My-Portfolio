@@ -342,22 +342,13 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Consistent Font Sizes for Section Headings */
-.certificates-container h2,
-.projects-container h2 {
-    font-size: 2.5em; /* Consistent heading size */
-    color: #ff4a4a; /* Heading color */
-    margin-bottom: 20px; /* Space below the heading */
-    text-align: center; /* Center the heading text */
-}
-
 /* Projects Section - Compact Layout */
 .projects-container {
     max-width: 900px; /* Max width for consistency */
     margin: auto; /* Center the container */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the start */
     text-align: left; /* Align text to the left */
 }
 
@@ -371,10 +362,24 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Center the Project Item */
+/* Consistent Font Sizes */
+.projects-container h2 {
+    font-size: 2.5em; /* Consistent heading size */
+    color: #ff4a4a; /* Heading color */
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center project items */
+    justify-content: center; /* Center the grid within its container */
+}
+
+/* Project Item */
 .project-item {
     text-align: center; /* Center text under images */
-    margin-bottom: 20px; /* Space below each project item */
 }
 
 /* Image Frame for Projects */
@@ -383,12 +388,18 @@ h3 {
     height: 200px; /* Fixed height for landscape orientation */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
 }
 
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
+    object-fit: cover; /* Maintain cover while fitting the frame */
+}
 
 /* Modal Styles */
 .modal {

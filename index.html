@@ -324,15 +324,16 @@ h3 {
     position: relative; /* For absolute positioning of images */
     max-width: 600px; /* Increased max width for larger displays */
     height: 300px; /* Fixed height for better visibility */
+    padding: 10px; /* Add padding around the image */
 }
 
 /* Certificate Images */
 .image-frame.certificate img {
-    position: absolute; /* Position absolutely within the frame */
+    position: relative; /* Change to relative for normal flow */
     top: 50%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: calc(100% - 20px); /* Full width minus padding */
+    height: calc(100% - 20px); /* Full height minus padding */
     object-fit: cover; /* Cover the frame without distortion */
     transform: translate(-50%, -50%); /* Adjust position to center */
 }

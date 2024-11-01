@@ -299,44 +299,91 @@ h3 {
 }
 
 /* Certificate Images */
+.image-frame.certificate {
+    width: 45%; /* Reduce frame size */
+    max-width: 400px; /* Set a max width for images */
+    height: auto; /* Adjust height proportionally */
+    margin-bottom: 20px; /* Space between rows */
+    overflow: hidden; /* Hide overflow for consistent frames */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
 .image-frame.certificate img {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     object-fit: cover; /* Cover the frame without distortion */
 }
 
+/* Certificates List - Two Rows */
+.certificates-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    gap: 20px; /* Space between items */
+    justify-content: space-around; /* Distribute images evenly */
+}
+
 /* Certificate Title Styling */
 .certificate-title {
     margin-top: 10px; /* Space between image and text */
-    font-weight: bold; /* Bold text for better visibility */
-    color: #000; /* Text color for contrast */
-    font-size: 1.2em; /* Adjust font size for better visibility */
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
 }
 
 /* Certificates Section - Compact Layout */
 .certificates-container {
-    max-width: 900px; /* Max width for consistency */
-    margin: auto; /* Center the container */
+    max-width: 900px;
+    margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
-    text-align: left; /* Align text to the left */
+    align-items: flex-start;
+    text-align: left;
 }
 
-.certificates-container ul {
-    list-style-type: disc; /* Use disc style for the bullet points */
-    padding-left: 20px; /* Indent the bullet points */
+/* Projects Container */
+.projects-container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the contents */
+    text-align: center; /* Center align the text */
 }
 
-.certificates-container p {
-    margin: 15px 0; /* Space between paragraphs */
-    font-size: 1.1em; /* Slightly larger text for readability */
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between project items */
+    justify-content: center; /* Center align project items */
 }
 
-/* Consistent Font Sizes */
-.certificates-container h2 {
-    font-size: 2.5em; /* Consistent heading size */
-    color: #ff4a4a; /* Heading color */
+/* Project Item */
+.project-item {
+    width: 100%;
+    max-width: 250px; /* Set consistent width */
+    text-align: center; /* Center text below image */
+}
+
+/* Image Frame for Projects */
+.image-frame.project {
+    width: 100%;
+    max-height: 250px; /* Consistent max height */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Project Title Styling */
+.project-title {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
 }
 
 /* Contact Section - Compact Layout */
@@ -533,11 +580,12 @@ h3 {
     <div class="certificates-list">
         <div class="image-frame certificate">
                 <img src="cert1.jpg" alt="Introduction to Python">
-            </div>
+            <div class="certificate-title">
             <p>Introduction to Python</p>
         </div>
         <div class="certificate-item">
                 <img src="cert2.jpg" alt="IBM Watson Studio">
+            </div>
             </div>
             <p>IBM Watson Studio</p>
         </div>

@@ -197,59 +197,38 @@
     animation: typing 3s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
-/* Adjustments for Projects */
-.project-item {
-    text-align: center; /* Center text under images */
-}
-
-.image-frame.project {
-    width: auto; /* Make image take full width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the frame without distortion */
-}
-
-/* Certificates Grid */
 .certificates-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly larger minimum width */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center items in the grid */
-    padding: 20px; /* Padding around the grid */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Equal gap between items */
+    justify-items: center;
+    padding: 20px;
 }
 
-/* Individual Certificate Items */
-.certificate-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Image Frame for Certificates */
 .image-frame.certificate {
-    width: 100%; /* Full width to fit the grid item */
-    height: auto; /* Automatic height */
-    aspect-ratio: 4 / 3; /* 4:3 aspect ratio for landscape */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    position: relative; /* For absolute positioning of images */
-    max-width: 450px; /* Limit max width for larger displays */
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-width: 450px; /* Maximum width for larger displays */
 }
 
-/* Certificate Images */
 .image-frame.certificate img {
-    position: absolute; /* Position absolutely within the frame */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    object-fit: cover; /* Cover the frame without distortion */
-    transform: translate(-50%, -50%); /* Adjust position to center */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
 }
 
-/* Certificate Name Styling */
 .image-frame.certificate p {
-    margin-top: 10px; /* Space between image and text */
-    font-weight: bold; /* Bold text for better visibility */
-    color: #000; /* Text color for contrast */
+    margin-top: 10px;
+    font-weight: bold;
+    color: #000;
 }
 
 /* Project Item */
@@ -460,10 +439,10 @@
             </div>
         </section>
 
-        <!-- Certificate Section -->
         <section id="certificates" class="section">
     <h2>Certificates</h2>
     <div class="certificates-grid">
+        <!-- First Row -->
         <div class="certificate-item">
             <div class="image-frame certificate">
                 <img src="cert1.jpg" alt="Introduction to Python">
@@ -476,6 +455,8 @@
                 <p>IBM Watson Studio</p>
             </div>
         </div>
+        
+        <!-- Second Row -->
         <div class="certificate-item">
             <div class="image-frame certificate">
                 <img src="cert3.jpg" alt="Cloud Application Developer">
@@ -491,6 +472,7 @@
     </div>
 </section>
 
+
         <!-- Projects Section -->
 <section id="projects" class="section">
     <h2>Projects</h2>
@@ -500,7 +482,7 @@
                 <img src="project1.png" alt="Retro Movies">
             </div>
             <h3>Retro Movies</h3>
-            <p>I have created an sample Online ticket booking website</p>
+            <p>I have created a sample Online ticket booking website</p>
         </div>
         <div class="project-item">
             <div class="image-frame.project">

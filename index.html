@@ -225,6 +225,19 @@ h1, h2, h3, p {
     transform: translate(-50%, -50%);
 }
 
+.certificates-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the grid */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+/* Projects Section Centering */
+.projects-container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the grid */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid; /* Use CSS Grid for layout */
@@ -417,6 +430,14 @@ h3 {
     background-clip: text;
 }
 
+/* Contact Section Centering */
+.contact-container {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
 .social-icons {
     display: flex;
     justify-content: center; /* Center the icons horizontally */
@@ -578,6 +599,7 @@ h3 {
     <h2>Certificates</h2>
     <div class="certificates-grid">
         <div class="certificate-item">
+            <div class="certificates-container">
             <div class="image-frame certificate" onclick="openModal('cert1.jpg')"> <!-- Add onclick here -->
                 <img src="cert1.jpg" alt="Introduction to Python">
                 <p>Introduction to Python</p>
@@ -618,6 +640,7 @@ h3 {
     <div class="projects-grid">
         <div class="project-item">
             <div class="image-frame.project">
+                <div class="projects-container">
                 <img src="project1.png" alt="Retro Movies">
             </div>
             <h3>Retro Movies</h3>
@@ -637,6 +660,7 @@ h3 {
     <section id="contact" class="section">
         <h2>Contact</h2>
         <div class="contact-info">
+            <div class="contact-container">
             <p>Email: dir.naren@gmail.com</p>
             <p>Phone: 7904752200</p>
             <p>Address: 123, Anna Nagar, Chennai, India</p>

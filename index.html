@@ -527,7 +527,7 @@ h3 {
         <p>I'm particularly interested in data analysis and machine learning. I believe in the power of collaboration and enjoy working in diverse teams to bring ideas to life.
         When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or sharing my knowledge through tutorials and workshops. I’m always eager to learn and grow in this fast-paced industry.</p>
     </div>
-                <div class="about-details">
+    <div class="about-details">
     <!-- Education Table -->
     <div class="detail-box">
         <h3><u>Education</u></h3>
@@ -560,20 +560,20 @@ h3 {
     </div>
 </div>
 
-                    <div class="detail-box">
-                        <h3><u>Work Experience</u></h3>
-                        <p>Currently seeking job opportunities.</p>
-                        <h3><u>Vision</u></h3>
-                        <p><i>"To craft scalable, user-centric applications that 
-                            seamlessly integrate with modern technologies, 
-                            improving lives and solving real-world problems 
-                            through innovation, collaboration, and continuous 
-                            learning."</i>
-                        </p>
-                        <button id="resumeButton" class="resume-button">View Resume</button>
-                    </div>
+<div class="detail-box">
+    <h3><u>Work Experience</u></h3>
+        <p>Currently seeking job opportunities.</p>
+        <h3><u>Vision</u></h3>
+        <p><i>"To craft scalable, user-centric applications that 
+        seamlessly integrate with modern technologies, 
+        improving lives and solving real-world problems 
+        through innovation, collaboration, and continuous 
+        learning."</i>
+        </p>
+    <button id="resumeButton" class="resume-button">View Resume</button>
+</div>
                     <!-- Skills Section -->
-                <div class="detail-box">
+<div class="detail-box">
     <h3><u>Skills</u></h3>
     <div class="skills-container">
         <div class="skill">
@@ -646,11 +646,10 @@ h3 {
     <img id="modalImage" src="cert4.jpg" alt="Data Analysis with Python">
 </div>
 
-
-
-        <!-- Projects Section -->
+<!-- Projects Section -->
 <section id="projects" class="section">
     <div class="projects-container">
+        <div class="projects-container h2">
     <h2>Projects</h2>
     <div class="projects-grid">
         <div class="project-item">
@@ -670,14 +669,14 @@ h3 {
     </div>
 </section>
 
-        <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="contact-container">
+<!-- Contact Section -->
+<section id="contact" class="section">
+    <div class="contact-container">
         <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: dir.naren@gmail.com</p>
-            <p>Phone: 7904752200</p>
-            <p>Address: 123, Anna Nagar, Chennai, India</p>
+    <div class="contact-info">
+        <p>Email: dir.naren@gmail.com</p>
+        <p>Phone: 7904752200</p>
+        <p>Address: 123, Anna Nagar, Chennai, India</p>
 
 <div class="social-icons">
     <a href="https://www.instagram.com" target="_blank" class="social-icon">
@@ -712,7 +711,7 @@ h3 {
     const modal = document.getElementById("imageModal");
     const modalImage = document.getElementById("modalImage");
     modal.style.display = "flex"; // Display the modal
-    modalImage.src = imageSrc; // Set the modal image source
+    modalImage.src = "cert4.jpg"; // Set the modal image source
 }
 
 function closeModal() {

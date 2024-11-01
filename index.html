@@ -342,39 +342,25 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Consistent Font Sizes for Section Headings */
+/* Consistent Font Sizes */
 .projects-container h2 {
     font-size: 2.5em; /* Consistent heading size */
     color: #ff4a4a; /* Heading color */
-    margin-bottom: 20px; /* Space below the heading */
-    text-align: left; /* Align the heading text to the left */
+    text-align: left;
 }
 
-/* Projects Section - Compact Layout */
-.projects-container {
-    max-width: 900px; /* Max width for consistency */
-    margin: auto; /* Center the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: left; /* Align text to the left */
+/* Projects Grid */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center project items */
+    justify-content: center; /* Center the grid within its container */
 }
 
-.projects-container ul {
-    list-style-type: disc; /* Use disc style for the bullet points */
-    padding-left: 20px; /* Indent the bullet points */
-}
-
-.projects-container p {
-    margin: 15px 0; /* Space between paragraphs */
-    font-size: 1.1em; /* Slightly larger text for readability */
-}
-
-/* Center the Project Item */
+/* Project Item */
 .project-item {
     text-align: center; /* Center text under images */
-    margin-bottom: 20px; /* Space below each project item */
-    width: 100%; /* Allow items to take full width for centering */
 }
 
 /* Image Frame for Projects */
@@ -383,11 +369,17 @@ h3 {
     height: 200px; /* Fixed height for landscape orientation */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-    max-width: 600px; /* Optional: Set a max width for images to prevent them from getting too large */
+}
+
+/* Image Styling */
+.project-item img {
+    width: 100%; /* Full width to fit the frame */
+    height: 100%; /* Full height to fit the frame */
+    object-fit: cover; /* Maintain cover while fitting the frame */
 }
 
 /* Modal Styles */

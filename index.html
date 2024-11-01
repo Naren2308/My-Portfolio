@@ -298,15 +298,6 @@ h3 {
     padding-right: 10px; /* Add some padding to the right */
 }
 
-/* Certificates Grid */
-.certificates-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly larger minimum width */
-    gap: 30px; /* Increase space between grid items */
-    justify-items: center; /* Center items in the grid */
-    padding: 20px; /* Padding around the grid */
-}
-
 /* Certificate Images */
 .image-frame.certificate img {
     width: 100%; /* Full width */
@@ -342,86 +333,10 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Projects Section - Compact Layout */
-.projects-container {
-    max-width: 900px; /* Max width for consistency */
-    margin: auto; /* Center the container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    text-align: left; /* Align text to the left */
-}
-
 /* Consistent Font Sizes */
-.projects-container h2 {
+.certificates-container h2 {
     font-size: 2.5em; /* Consistent heading size */
     color: #ff4a4a; /* Heading color */
-    text-align: left; /* Align the heading text to the left */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center project items */
-}
-
-/* Project Item */
-.project-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Image Frame for Projects */
-.image-frame.project {
-    width: 100%; /* Full width */
-    max-height: 300px; /* Set a max height for equal frame size */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-}
-
-/* Image Styling */
-.project-item img {
-    width: 100%; /* Full width to fit the frame */
-    height: auto; /* Allow height to adjust based on width */
-    max-height: 100%; /* Ensure image height does not exceed frame height */
-    object-fit: contain; /* Maintain aspect ratio while fitting the frame */
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
-    justify-content: center; /* Center modal content */
-    align-items: center; /* Center modal content */
-}
-
-.modal img {
-    max-width: 90%; /* Scale image within modal */
-    max-height: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
 }
 
 /* Contact Section - Compact Layout */
@@ -640,12 +555,11 @@ h3 {
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="section">
-    <div class="projects-container">
-        <h2>Projects</h2> <!-- Correct placement of the heading -->
-        <div class="projects-grid">
-            <div class="project-item">
-                <div class="image-frame project">
+<div class="projects-container">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I've worked on:</p>
+    <div class="project-item">
+        <div class="image-frame project">
                     <img src="project1.png" alt="Retro Movies">
                 </div>
                 <h3>Retro Movies</h3>

@@ -339,14 +339,56 @@ h3 {
     font-size: 1.2em; /* Adjust font size for better visibility */
 }
 
+/* Certificates Section - Compact Layout */
+.certificates-container {
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
+}
+
+.certificates-container ul {
+    list-style-type: disc; /* Use disc style for the bullet points */
+    padding-left: 20px; /* Indent the bullet points */
+}
+
+.certificates-container p {
+    margin: 15px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger text for readability */
+}
+
+/* Consistent Font Sizes */
+.certificates-container h2 {
+    font-size: 2.5em; /* Consistent heading size */
+    color: #ff4a4a; /* Heading color */
+}
+
 /* Projects Section - Compact Layout */
 .projects-container {
     max-width: 900px; /* Max width for consistency */
     margin: auto; /* Center the container */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally in the container */
+    align-items: flex-start; /* Align items to the start */
     text-align: left; /* Align text to the left */
+}
+
+.projects-container ul {
+    list-style-type: disc; /* Use disc style for the bullet points */
+    padding-left: 20px; /* Indent the bullet points */
+}
+
+.projects-container p {
+    margin: 15px 0; /* Space between paragraphs */
+    font-size: 1.1em; /* Slightly larger text for readability */
+}
+
+/* Consistent Font Sizes */
+.projects-container h2 {
+    font-size: 2.5em; /* Consistent heading size */
+    color: #ff4a4a; /* Heading color */
 }
 
 /* Projects Grid */
@@ -413,7 +455,16 @@ h3 {
     cursor: pointer;
 }
 
-/* Contact Info */
+/* Contact Section - Compact Layout */
+.contact-container {
+    max-width: 900px; /* Max width for consistency */
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    text-align: left; /* Align text to the left */
+}
+
 .contact-info {
     text-align: center; /* Center contact information */
 }
@@ -593,6 +644,7 @@ h3 {
 
 <!-- Certificates Section -->
 <section id="certificates" class="section">
+    <div class="certificates-container">
     <h2>Certificates</h2>
     <div class="certificates-grid">
         <div class="certificate-item">
@@ -632,6 +684,7 @@ h3 {
 
         <!-- Projects Section -->
 <section id="projects" class="section">
+    <div class="projects-container">
     <h2>Projects</h2>
     <div class="projects-grid">
         <div class="project-item">
@@ -653,6 +706,7 @@ h3 {
 
         <!-- Contact Section -->
     <section id="contact" class="section">
+        <div class="contact-container">
         <h2>Contact</h2>
         <div class="contact-info">
             <p>Email: dir.naren@gmail.com</p>

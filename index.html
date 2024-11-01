@@ -342,6 +342,14 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
+/* Consistent Font Sizes for Section Headings */
+.projects-container h2 {
+    font-size: 2.5em; /* Consistent heading size */
+    color: #ff4a4a; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: left; /* Align the heading text to the left */
+}
+
 /* Projects Section - Compact Layout */
 .projects-container {
     max-width: 900px; /* Max width for consistency */
@@ -362,25 +370,11 @@ h3 {
     font-size: 1.1em; /* Slightly larger text for readability */
 }
 
-/* Consistent Font Sizes */
-.projects-container h2 {
-    font-size: 2.5em; /* Consistent heading size */
-    color: #ff4a4a; /* Heading color */
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
-    gap: 20px; /* Space between grid items */
-    justify-items: center; /* Center project items */
-    justify-content: center; /* Center the grid within its container */
-}
-
 /* Center the Project Item */
 .project-item {
     text-align: center; /* Center text under images */
     margin-bottom: 20px; /* Space below each project item */
+    width: 100%; /* Allow items to take full width for centering */
 }
 
 /* Image Frame for Projects */
@@ -393,14 +387,7 @@ h3 {
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
-}
-
-/* Image Styling */
-.project-item img {
-    width: 100%; /* Full width to fit the frame */
-    height: 100%; /* Full height to fit the frame */
-    object-fit: cover;
-    align-items: center;/* Maintain cover while fitting the frame */
+    max-width: 600px; /* Optional: Set a max width for images to prevent them from getting too large */
 }
 
 /* Modal Styles */

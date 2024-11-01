@@ -346,7 +346,8 @@ h3 {
 .projects-container h2 {
     font-size: 2.5em; /* Consistent heading size */
     color: #ff4a4a; /* Heading color */
-    text-align: left;
+    text-align: left; /* Align the heading text to the left */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
 /* Projects Grid */
@@ -355,7 +356,6 @@ h3 {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive layout */
     gap: 20px; /* Space between grid items */
     justify-items: center; /* Center project items */
-    justify-content: center; /* Center the grid within its container */
 }
 
 /* Project Item */
@@ -366,7 +366,7 @@ h3 {
 /* Image Frame for Projects */
 .image-frame.project {
     width: 100%; /* Full width */
-    height: 200px; /* Fixed height for landscape orientation */
+    height: 300px; /* Fixed height for equal frame size */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
@@ -380,7 +380,6 @@ h3 {
     width: 100%; /* Full width to fit the frame */
     height: 100%; /* Full height to fit the frame */
     object-fit: cover; /* Maintain cover while fitting the frame */
-    align-items: center;
 }
 
 /* Modal Styles */
@@ -642,27 +641,26 @@ h3 {
 <!-- Projects Section -->
 <section id="projects" class="section">
     <div class="projects-container">
-        <div class="projects-container h2">
-            <div class="image-frame.project">
-                <h2>Projects</h2>
-            <div class="projects-grid">
+        <h2>Projects</h2> <!-- Correct placement of the heading -->
+        <div class="projects-grid">
             <div class="project-item">
-            <div class="image-frame.project">
-                <img src="project1.png" alt="Retro Movies">
+                <div class="image-frame project"> <!-- Correct class name without dot -->
+                    <img src="project1.png" alt="Retro Movies">
+                </div>
+                <h3>Retro Movies</h3>
+                <p><i>I have created a sample Online ticket booking website</i></p>
             </div>
+            <div class="project-item">
+                <div class="image-frame project"> <!-- Correct class name without dot -->
+                    <img src="m4uhd.png" alt="M4UHD Movie Streaming">
+                </div>
+                <h3>M4UHD Movie Streaming</h3>
+                <p><i>In this project, I have created a sample Movie streaming application</i></p>
             </div>
-            <h3>Retro Movies</h3>
-            <p><i>I have created a sample Online ticket booking website</i></p>
-        </div>
-        <div class="project-item">
-            <div class="image-frame.project">
-                <img src="m4uhd.png" alt="m4uhd">
-            </div>
-            <h3>M4UHD Movie Streming</h3>
-            <p><i>In this project i have create a sample Movie streaming application</i></p>
         </div>
     </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="section">

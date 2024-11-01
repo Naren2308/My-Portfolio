@@ -302,9 +302,8 @@ h3 {
 .certificates-grid {
     display: grid; /* Use CSS Grid for layout */
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Slightly larger minimum width */
-    gap: 20px; /* Space between grid items */
+    gap: 30px; /* Increase space between grid items */
     justify-items: center; /* Center items in the grid */
-    justify-content: center; /* Center the grid within its container */
     padding: 20px; /* Padding around the grid */
 }
 
@@ -323,26 +322,21 @@ h3 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     position: relative; /* For absolute positioning of images */
     max-width: 600px; /* Increased max width for larger displays */
-    height: 300px; /* Fixed height for better visibility */
-    padding: 10px; /* Add padding around the image */
 }
 
 /* Certificate Images */
 .image-frame.certificate img {
-    position: relative; /* Change to relative for normal flow */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: calc(100% - 20px); /* Full width minus padding */
-    height: calc(100% - 20px); /* Full height minus padding */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
     object-fit: cover; /* Cover the frame without distortion */
-    transform: translate(-50%, -50%); /* Adjust position to center */
 }
 
-/* Certificate Name Styling */
-.image-frame.certificate p {
+/* Certificate Title Styling */
+.certificate-title {
     margin-top: 10px; /* Space between image and text */
     font-weight: bold; /* Bold text for better visibility */
     color: #000; /* Text color for contrast */
+    font-size: 1.2em; /* Adjust font size for better visibility */
 }
 
 /* Projects Section - Compact Layout */
@@ -604,26 +598,26 @@ h3 {
         <div class="certificate-item">
             <div class="image-frame certificate" onclick="openModal('cert1.jpg')"> <!-- Add onclick here -->
                 <img src="cert1.jpg" alt="Introduction to Python">
-                <p>Introduction to Python</p>
             </div>
+            <p>Introduction to Python</p>
         </div>
         <div class="certificate-item">
             <div class="image-frame certificate" onclick="openModal('cert2.jpg')"> <!-- Add onclick here -->
                 <img src="cert2.jpg" alt="IBM Watson Studio">
-                <p>IBM Watson Studio</p>
             </div>
+            <p>IBM Watson Studio</p>
         </div>
         <div class="certificate-item">
             <div class="image-frame certificate" onclick="openModal('cert3.jpg')"> <!-- Add onclick here -->
                 <img src="cert3.jpg" alt="Cloud Application Developer">
-                <p>Cloud Application Developer</p>
             </div>
+            <p>Cloud Application Developer</p>
         </div>
         <div class="certificate-item">
             <div class="image-frame certificate" onclick="openModal('cert4.jpg')"> <!-- Add onclick here -->
                 <img src="cert4.jpg" alt="Data Analysis with Python">
-                <p>Data Analysis with Python</p>
             </div>
+            <p>Data Analysis with Python</p>
         </div>
     </div>
 </section>

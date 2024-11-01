@@ -170,26 +170,24 @@
         }
 
 .typing-effect {
-    font-size: 2em; /* Adjust size as needed */
-    color: #ff4a4a; /* Text color */
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflow */
-    border-right: 4px solid #ff4a4a; /* Cursor effect */
-    width: 0; /* Initial width */
-    animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
-}
+        font-size: 2em; /* Adjust size as needed */
+        color: #ff4a4a; /* Text color */
+        white-space: nowrap; /* Prevent text wrapping */
+        overflow: hidden; /* Hide overflow */
+        border-right: 4px solid #ff4a4a; /* Cursor effect */
+        width: 0; /* Initial width */
+        animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+    }
 
-/* Typing animation */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
 
-/* Blinking cursor animation */
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: #ff4a4a; }
-}
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: #ff4a4a; }
+    }
 
 /* Individual Certificate Items */
 .certificate-item {
@@ -428,7 +426,7 @@
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="about-content">
-                <p>I am Narenkumar, an Application Developer passionate about coding and collaboration.</p>
+                <p>Welcome to My World of Coding! I'm Narenkumar, Your Application Developer</p>
                 <div class="about-details">
                     <!-- Education Box -->
                     <div class="detail-box">
@@ -573,37 +571,31 @@ function closeModal() {
 }
 
             const phrases = [
-    "Hello, I’m Narenkumar, an Enthusiastic Application Developer.",
-    "Welcome to My World of Coding! I'm Narenkumar, Your Application Developer.",
-    "Hi there! I'm Narenkumar, Passionate About Creating Innovative Applications.",
-    "Greetings! I’m Narenkumar, an Application Developer Committed to Excellence.",
-    "Welcome! I’m Narenkumar, Your Go-To Application Developer for Innovative Solutions."
-];
+        "Hello, I’m Narenkumar, an Enthusiastic Application Developer.",
+    ];
 
-let currentPhrase = 0;
+    let currentPhrase = 0;
 
-function type() {
-    const typingText = document.querySelector('.typing-effect');
-    typingText.textContent = '';
-    let letterIndex = 0;
+    function type() {
+        const typingText = document.querySelector('.typing-effect');
+        typingText.textContent = '';
+        let letterIndex = 0;
 
-    const interval = setInterval(() => {
-        if (letterIndex < phrases[currentPhrase].length) {
-            typingText.textContent += phrases[currentPhrase][letterIndex];
-            letterIndex++;
-        } else {
-            clearInterval(interval);
-            setTimeout(() => {
+        const interval = setInterval(() => {
+            if (letterIndex < phrases[currentPhrase].length) {
+                typingText.textContent += phrases[currentPhrase][letterIndex];
+                letterIndex++;
+            } else {
+                clearInterval(interval);
                 currentPhrase = (currentPhrase + 1) % phrases.length; // Move to next phrase
-                type(); // Start typing next phrase
-            }, 2000); // Pause before starting next phrase
-        }
-    }, 100); // Typing speed (adjust as necessary)
-}
+                setTimeout(type, 0); // Restart typing immediately without delay
+            }
+        }, 100); // Typing speed (adjust as necessary)
+    }
 
-document.addEventListener("DOMContentLoaded", () => {
-    type(); // Start the typing effect
-});
+    document.addEventListener("DOMContentLoaded", () => {
+        type(); // Start the typing effect
+    });
         }
     </script>
 </body>

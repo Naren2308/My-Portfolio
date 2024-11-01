@@ -288,34 +288,36 @@ h3 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    background: linear-gradient(135deg, rgba(255, 0, 0, 0.7), rgba(139, 0, 0, 0.7)); /* Enhanced red gradient */
-    color: #ffffff;
+    background: #3c3c3c; /* Main table background color */
+    color: white;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* For rounded corners */
 }
 
 .detail-box th, .detail-box td {
-    padding: 12px;
+    padding: 10px 15px;
     text-align: left;
-    border: none; /* Remove inner cell borders for a cleaner look */
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .detail-box th {
-    background: rgba(139, 0, 0, 0.85); /* Darker red for table headers */
-    color: #ffffff;
-    font-weight: bold;
+    background: linear-gradient(135deg, #ff4a4a, #660000); /* Gradient red for headers */
+    color: #ffffff; /* White text for contrast */
+    border-bottom: 2px solid #660000;
+}
+
+.detail-box tr:nth-child(even) {
+    background-color: #454545; /* Slightly lighter than #3c3c3c for even rows */
+}
+
+.detail-box tr:nth-child(odd) {
+    background-color: #3c3c3c; /* Darker background for odd rows */
 }
 
 .detail-box td {
-    background: rgba(255, 0, 0, 0.2); /* Light transparent red for cells */
-    color: #ffcccc;
-    font-weight: 500;
-}
-
-/* Optional: Add row hover effect for better interaction */
-.detail-box tr:hover td {
-    background: rgba(255, 0, 0, 0.3); /* Slightly darker on hover */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle row divider */
 }
 
 /* Resume Button */

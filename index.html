@@ -307,23 +307,6 @@ h3 {
     padding: 20px; /* Padding around the grid */
 }
 
-/* Individual Certificate Items */
-.certificate-item {
-    text-align: center; /* Center text under images */
-}
-
-/* Image Frame for Certificates */
-.image-frame.certificate {
-    width: 100%; /* Full width to fit the grid item */
-    height: auto; /* Automatic height */
-    aspect-ratio: 4 / 3; /* 4:3 aspect ratio for landscape */
-    overflow: hidden; /* Hide overflow */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    position: relative; /* For absolute positioning of images */
-    max-width: 600px; /* Increased max width for larger displays */
-}
-
 /* Certificates Section - Compact Layout */
 .certificates-container {
     max-width: 900px; /* Max width for consistency */
@@ -354,11 +337,11 @@ h3 {
 .image-frame.certificate {
     width: 100%; /* Full width to fit the grid item */
     height: auto; /* Automatic height */
-    aspect-ratio: 4 / 3; /* 4:3 aspect ratio for landscape */
+    aspect-ratio: 3 / 2; /* Reduced aspect ratio for smaller images */
     overflow: hidden; /* Hide overflow */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-    max-width: 600px; /* Increased max width for larger displays */
+    max-width: 450px; /* Reduced max width for smaller displays */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */

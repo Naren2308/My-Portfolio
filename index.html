@@ -288,20 +288,36 @@ h3 {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    border: 2px solid red;
-    background: linear-gradient(135deg, rgba(255, 0, 0, 0.3), rgba(139, 0, 0, 0.3)); /* Red gradient background */
+    background: linear-gradient(135deg, #330000, #660000); /* Dark red background */
+    color: white;
+    border-radius: 8px;
+    overflow: hidden; /* For rounded corners on table */
 }
 
 .detail-box th, .detail-box td {
-    border: 1px solid rgba(255, 0, 0, 0.5); /* Softer red border */
-    padding: 8px;
+    padding: 10px 15px;
     text-align: left;
-    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #ffffff;
 }
 
 .detail-box th {
-    background: linear-gradient(135deg, rgba(255, 99, 71, 0.7), rgba(139, 0, 0, 0.7)); /* Slightly more opaque gradient for headers */
-    font-weight: bold;
+    background: linear-gradient(135deg, #ff4a4a, #990000); /* Gradient red for headers */
+    color: #ffffff; /* White text for contrast */
+    border-bottom: 2px solid #990000;
+}
+
+.detail-box tr:nth-child(even) {
+    background: rgba(255, 77, 77, 0.2); /* Light red background for even rows */
+}
+
+.detail-box tr:nth-child(odd) {
+    background: rgba(153, 0, 0, 0.4); /* Slightly darker background for odd rows */
+}
+
+.detail-box td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for row separation */
 }
 
 /* Resume Button */

@@ -545,7 +545,7 @@ h3 {
         through innovation, collaboration, and continuous 
         learning."</i>
         </p>
-    <button id="resumeButton" class="resume-button">View Resume</button>
+    <button onclick="redirectToImage()">View Resume</button>
 </div>
                     <!-- Skills Section -->
 <div class="detail-box">
@@ -666,9 +666,13 @@ h3 {
             const sideNav = document.getElementById("sideNav");
             sideNav.style.left = sideNav.style.left === "-250px" ? "0" : "-250px";
 
-            document.getElementById("resumeButton").addEventListener("click", function() {
-    const resumeImageUrl = "Resume.jpg"; // Replace with your actual image path
-    window.open(resumeImageUrl, "_blank"); // Open image in a new tab
+             function redirectToImage() {
+            // Replace 'your-image-url.jpg' with the actual URL of the image you upload
+            const imageUrl = "Resume.jpg"; 
+            
+            // Redirect to the image URL
+            window.location.href = imageUrl;
+        }
 });
         }
     </script>

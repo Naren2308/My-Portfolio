@@ -664,17 +664,20 @@ h3 {
 </div>
 
     <script>
-        function toggleNav() {
-            const sideNav = document.getElementById("sideNav");
-            sideNav.style.left = sideNav.style.left === "-250px" ? "0" : "-250px";
+    const sideNav = document.getElementById("sideNav");
 
-             function redirectToImage() {
-            const imageUrl = "https://drive.google.com/file/d/1hEJx1njCGv6NN3P0FN-cmKH9qIVGy0ge/view?usp=sharing"; 
-            // Open the image URL in a new tab or blank page
-            window.open(imageUrl, "_blank");
+    function toggleNav() {
+        if (sideNav.style.left === "0px") {
+            sideNav.style.left = "-250px"; // Hide the navigation
+        } else {
+            sideNav.style.left = "0px"; // Show the navigation
         }
-});
-        }
-    </script>
+    }
+
+    function redirectToImage() {
+        window.open('path/to/your/resume.pdf', '_blank'); // Replace with your resume's URL
+    }
+</script>
+    
 </body>
 </html>
